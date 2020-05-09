@@ -14,3 +14,23 @@ $ sudo docker-compose run app sh -c "django-admin.py startproject app ."
 
 Travis-ci.org
 .travis.yml
+
+$ sudo docker-compose run app sh -c "python manage.py test" && flake8
+
+#### Core app
+
+$ sudo docker-compose run app sh -c "django-admin.py startapp core"
+clean
+  test.py(all test in a folder test)
+  views.py(core don't serve anything just hold database models)
+new
+    tests/
+      __init__.py
+
+create models:
+  tests/test_models.py
+  in models.py create user Model
+  app/settings at the end
+    AUTH_USER_MODEL = 'core.User'
+
+$ sudo docker-compose run app sh -c "python manage.py makemigrations core"
