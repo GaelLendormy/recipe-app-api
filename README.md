@@ -34,3 +34,14 @@ create models:
     AUTH_USER_MODEL = 'core.User'
 
 $ sudo docker-compose run app sh -c "python manage.py makemigrations core"
+
+POSTEGRES
+  edit docker-compose.yml
+  edit requirements.txt
+  edit Dockerfile
+  $ sudo docker-compose build
+  update DATABASE settings.py
+
+  hepler to verify db is up before django try to connect
+    test_commands.py
+    management/commands/wait_for_db.py
