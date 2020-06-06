@@ -45,3 +45,14 @@ POSTEGRES
   hepler to verify db is up before django try to connect
     test_commands.py
     management/commands/wait_for_db.py
+
+
+  $ sudo docker-compose up (launch server)
+  $ sudo docker-compose run app sh -c "python manage.py createsuperuser"
+
+user app
+  app/settings
+    'rest_framework',
+    'rest_framework.authtoken',
+
+Token to identify request
