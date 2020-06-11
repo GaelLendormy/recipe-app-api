@@ -56,3 +56,8 @@ user app
     'rest_framework.authtoken',
 
 Token to identify request
+Manage User endpoint
+    Test
+    views
+    serializer
+    url
